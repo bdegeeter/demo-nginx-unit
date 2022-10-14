@@ -4,7 +4,7 @@ VERSION=0.1.1
 
 .PHONY: build-image
 build-image:
-	docker build . --tag $(REGISTRY):v$(VERSION)
+	docker buildx build . --tag $(REGISTRY):v$(VERSION)
 
 .PHONY: publish-image
 publish-image: build-image

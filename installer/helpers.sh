@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
-set -x
 K8S_CFG=/home/nonroot/.kube/config
 CLUSTER_NAME=nginx-unit-k8s-kind
 
@@ -13,10 +12,12 @@ install() {
   docker network connect kind ${HOSTNAME}
   KIND_DIND_IP=$(docker inspect -f "{{ .NetworkSettings.Networks.kind.IPAddress }}" ${CLUSTER_NAME}-control-plane)
   sed -i -e "s@server: .*@server: https://${KIND_DIND_IP}:6443@" /home/nonroot/.kube/config
-  kind load docker-image "${1}" --name ${CLUSTER_NAME}
+  #docker pull ${1}
+  #kind load docker-image "${1}" --name ${CLUSTER_NAME}
   kubectl create namespace ingress-nginx
   kubectl create namespace nginx-unit
   kubectl apply -k deploy/local/
+  echo "Browse to http://nginx-unit-demo.localtest.me to see you local deployment"
 }
 
 upgrade() {
