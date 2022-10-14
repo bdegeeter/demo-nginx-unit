@@ -1,0 +1,4 @@
+unit.nginx.org/go v0.0.0-20220912232626-ea073fb3cb75 h1:pbIw+gTaeFmrvhrc3b/4sh9VAZPDTBN8uc1J7Kfen2U=
+unit.nginx.org/go v0.0.0-20220912232626-ea073fb3cb75/go.mod h1:rIOZelt2HNxH+Usc1WT2b5OlEDHQwc3IZRxYxiZiKvM=
+unit.nginx.org/go v0.0.0-20221006114747-0fdd0b751538 h1:1w7t7W9sFdn14FFST9o7HOnGPp/f/bDVs1V4KxkXH+A=
+unit.nginx.org/go v0.0.0-20221006114747-0fdd0b751538/go.mod h1:rIOZelt2HNxH+Usc1WT2b5OlEDHQwc3IZRxYxiZiKvM=

@@ -1,0 +1,14 @@
+{
+  "listeners": {
+    "*:8080": {
+      "pass": "applications/go"
+    }
+  },
+  "applications": {
+    "go": {
+      "type": "external",
+      "working_directory": "/www/app/test-nginx-unit",
+      "executable": "/www/app/test-nginx-unit/main"
+    }
+  }
+}

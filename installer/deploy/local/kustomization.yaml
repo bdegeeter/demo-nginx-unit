@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: nginx-unit
+resources:
+  - ../k8s-nginx-ingress/overlays/kind/
+  - ../nginx-unit-demo/
+
+commonLabels:
+  cedi.octo.f5net.com/app: nginx-unit-demo
