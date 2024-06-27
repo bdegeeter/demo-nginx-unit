@@ -2,6 +2,7 @@
 
 Example Go Nginx Unit application running on local KinD Kubernetes cluster
 * [Install Porter](https://getporter.org/install/)
+  * [porter.yaml](installer/porter.yaml)
 * Install Nginx Unit Demo
   * `porter install --allow-docker-host-access --reference ghcr.io/bdegeeter/porter-nginx-unit-demo:v0.1.1 porter-nginx-unit-demo`
 * Go to `http://nginx-unit-demo.localtest.me`
